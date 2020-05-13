@@ -1,6 +1,6 @@
 import Vuex from 'vuex';
 import { shallowMount, createLocalVue, mount } from '@vue/test-utils';
-import CleanStatusMasterList from '@/js/components/pages/CleanStatusMasterList';
+import ShiftMasterList from '@/js/components/pages/ShiftMasterList';
 import Vuetify from 'vuetify';
 import Vue from 'vue'
 import i18n from '@/js/i18n';
@@ -9,7 +9,7 @@ import store from '@/js/store';
 const localVue = createLocalVue();
 Vue.use(Vuetify)
 localVue.use(Vuex)
-describe('CleanStatusMasterList',()=>{
+describe('ShiftMasterList',()=>{
     let vuetify
     let wrapper
     let res = {
@@ -38,7 +38,7 @@ describe('CleanStatusMasterList',()=>{
         vuetify = new Vuetify()
         store.dispatch = jest.fn()
         store.dispatch.mockResolvedValue(res)
-        wrapper = mount(CleanStatusMasterList, {
+        wrapper = mount(ShiftMasterList, {
             store,
             localVue,
             vuetify,
