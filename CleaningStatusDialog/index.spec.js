@@ -13,7 +13,6 @@ describe('CleaningStatusDialog',()=>{
     let vuetify
     let wrapper
     beforeEach(() => {
-        wrapper.vm.dialog=true
         vuetify = new Vuetify()
         store.dispatch = jest.fn()
         wrapper = mount(CleaningStatusDialog, {
